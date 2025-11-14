@@ -35,7 +35,7 @@ const About = () => {
           {/* Text Content */}
           <div className="space-y-6">
             <p className="text-lg text-gray-700 leading-relaxed">
-              Hello! I'm Sajan Maharjan, a passionate musician and researcher
+              Hello! I&apos;m Sajan Maharjan, a passionate musician and researcher
               dedicated to preserving and promoting the beautiful traditions of
               Newari music. My journey in music began at an early age, and over
               the years, I have had the privilege of performing at various
@@ -43,8 +43,8 @@ const About = () => {
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
               Beyond performing, I am deeply committed to academic research on
-              traditional music. My published paper, "Preservation of Newari
-              Music," explores the cultural significance and challenges of
+              traditional music. My published paper, &quot;Preservation of Newari
+              Music,&quot; explores the cultural significance and challenges of
               maintaining these ancient musical traditions in the modern world.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
