@@ -14,13 +14,13 @@ const About = () => {
         </div>
 
         {/* Portfolio Picture */}
-        <div className="flex justify-center mb-12">
-          <div className="relative w-64 h-64 md:w-80 md:h-80">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary-200 to-accent-200 rounded-2xl transform rotate-3"></div>
-            <div className="relative bg-white rounded-2xl overflow-hidden shadow-2xl transform -rotate-3 hover:rotate-0 transition-transform duration-300">
+        <div className="flex justify-center mb-12 px-4">
+          <div className="relative w-64 h-64 md:w-80 md:h-80 max-w-full">
+            <div className="absolute inset-2 bg-gradient-to-br from-primary-200 to-accent-200 rounded-2xl"></div>
+            <div className="relative w-full h-full bg-white rounded-2xl overflow-hidden shadow-2xl">
               {/* Replace '/images/profile.jpg' with your actual photo path */}
               <Image
-                src="/images/profile.jpg"
+                src="/images/profilepic.JPG"
                 alt="Sajan Maharjan - Musician and Researcher"
                 width={400}
                 height={400}

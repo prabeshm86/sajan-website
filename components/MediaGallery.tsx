@@ -18,49 +18,48 @@ const MediaGallery = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   // Sample media items - replace with your actual media
-  const mediaItems: MediaItem[] = [
-    {
+  const mediaItems: MediaItem[] = [{
       id: 1,
       type: "youtube",
-      src: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+      src: "https://www.youtube.com/embed/7iMkoAPvhT8?si=cgA2jRF9f2OdUNqS",
+      thumbnail: "/images/thumbnail1.jpg",
       title: "Traditional Performance 1",
       description: "Live performance at cultural festival",
     },
     {
       id: 2,
       type: "youtube",
-      src: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+      src: "https://www.youtube.com/embed/PjlJ6l61hNA?si=1LJXEuTJX7QjhRes",
+      thumbnail: "/images/thumbnail2.jpg",
       title: "Traditional Performance 2",
       description: "Concert hall performance",
     },
     {
       id: 3,
       type: "image",
-      src: "/placeholder-performance1.jpg",
+      src: "/images/performance1.jpg",
       title: "Performance Photo 1",
       description: "Outdoor festival performance",
     },
     {
       id: 4,
       type: "image",
-      src: "/placeholder-performance2.jpg",
+      src: "/images/performance2.jpg",
       title: "Performance Photo 2",
       description: "Studio recording session",
     },
     {
       id: 5,
       type: "youtube",
-      src: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+      src: "https://www.youtube.com/embed/igR-9kVCREQ?si=X3QanRNZ620CBqyd",
+      thumbnail: "/images/thumbnail3.jpg",
       title: "Traditional Performance 3",
       description: "Collaborative performance",
     },
     {
       id: 6,
       type: "image",
-      src: "/placeholder-performance3.jpg",
+      src: "/images/performance3.png",
       title: "Performance Photo 3",
       description: "Traditional instrument showcase",
     },
