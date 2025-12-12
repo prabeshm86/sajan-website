@@ -37,14 +37,14 @@ const MediaGallery = () => {
     {
       id: 3,
       type: "image",
-      src: "/images/performance1.jpg",
+      src: "/images/performance1.JPG",
       title: "Rock n' Roll Fantasy",
       description: "Whiskey a go-go performance",
     },
     {
       id: 4,
       type: "image",
-      src: "/images/performance2.jpg",
+      src: "/images/performance2.JPG",
       title: "Stewart Copeland and Robbie Krieger",
       description: "Performing with the legends",
     },
