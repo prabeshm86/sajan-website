@@ -28,16 +28,47 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Simulate form submission
-    setStatus({ type: "success", message: "Thank you! Your message has been sent successfully." });
-    
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    });
+    try {
+      // Send email using Formspree
+      const response = await fetch("https://formspree.io/f/xovagvlo", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          _replyto: formData.email,
+        }),
+      });
+
+      if (response.ok) {
+        setStatus({ 
+          type: "success", 
+          message: "Thank you! Your message has been sent successfully." 
+        });
+        
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        setStatus({ 
+          type: "error", 
+          message: "Oops! There was a problem sending your message. Please try again." 
+        });
+      }
+    } catch (error) {
+      setStatus({ 
+        type: "error", 
+        message: "Oops! There was a problem sending your message. Please try again." 
+      });
+    }
 
     // Clear status after 5 seconds
     setTimeout(() => {
@@ -75,10 +106,10 @@ const Contact = () => {
                   <div>
                     <h4 className="font-semibold text-gray-900">Email</h4>
                     <a
-                      href="mailto:contact@sajanmaharjan.com"
+                      href="mailto:sajanmaharjan1991@gmail.com"
                       className="text-gray-600 hover:text-primary-600 transition-colors"
                     >
-                      contact@sajanmaharjan.com
+                      sajanmaharjan1991@gmail.com
                     </a>
                   </div>
                 </div>
@@ -87,8 +118,13 @@ const Contact = () => {
                     <FiMapPin className="w-6 h-6 text-primary-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">Location</h4>
-                    <p className="text-gray-600">Kathmandu, Nepal</p>
+                    <h4 className="font-semibold text-gray-900">Phone</h4>
+                    <a
+                      href="tel:+16692941020"
+                      className="text-gray-600 hover:text-primary-600 transition-colors"
+                    >
+                      (669) 294-1020
+                    </a>
                   </div>
                 </div>
               </div>
@@ -115,6 +151,10 @@ const Contact = () => {
                   <span className="text-primary-600 mr-2">•</span>
                   Cultural consultation projects
                 </li>
+                <li className="flex items-start">
+                  <span className="text-primary-600 mr-2">•</span>
+                  Drum studio sessions
+                </li>
               </ul>
             </div>
           </div>
@@ -136,7 +176,7 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all text-gray-900"
                   placeholder="Your name"
                 />
               </div>
@@ -155,7 +195,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all text-gray-900"
                   placeholder="your.email@example.com"
                 />
               </div>
@@ -174,7 +214,7 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all text-gray-900"
                   placeholder="What is this regarding?"
                 />
               </div>
@@ -193,7 +233,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all resize-none"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all resize-none text-gray-900"
                   placeholder="Your message..."
                 ></textarea>
               </div>

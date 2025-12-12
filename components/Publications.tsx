@@ -56,7 +56,7 @@ const Publications = () => {
                     Download PDF
                   </a>
                   <a
-                    href="#"
+                    href="https://digitalcommons.csumb.edu/caps_thes_all/2005/"
                     className="inline-flex items-center justify-center px-6 py-3 bg-white text-primary-600 border-2 border-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors"
                   >
                     <FiExternalLink className="mr-2" />
